@@ -39,7 +39,7 @@ getQuote = () => {
           <nav>
             <ul>
               <li>
-                <a href="/cats">Cat-apult</a>
+                <Link href="/cats">Cat-apult</Link>
               </li>
               <li>
                 <Link to="/quotes">The only direction</Link>
