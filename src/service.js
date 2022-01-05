@@ -10,5 +10,11 @@ export function fetchYe() {
    }).then(response => response.json());
   }
 
+//   export function fetchNasa() {
+//       return fetch('https://api.nasa.gov/planetary/apod?api_key=fLyqTkOiS1CYt44RynV69I0bhbx43Kcicjp43jhf', {
+//           method: 'GET'
+//       }).then(response => response.json());
+//   }
+
 
   

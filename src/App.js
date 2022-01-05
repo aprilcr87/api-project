@@ -5,6 +5,7 @@ import './App.css';
 import { fetchCat, fetchYe } from './service';
 import Cats from './pages/cats';
 import Quote from './pages/quote';
+import About from './pages/About';
 
 class App extends React.Component {
   constructor() {
@@ -23,11 +24,12 @@ class App extends React.Component {
     });
  }
 
- getQuote = () => {
+getQuote = () => {
   return fetchYe().then(data => {
     let quote = data.quote;
     this.setState({quote: quote, picUrl: 'https://picsum.photos/600/600?grayscale'});
   });
+  
 }
 
   render() {
@@ -37,10 +39,13 @@ class App extends React.Component {
           <nav>
             <ul>
               <li>
-                <Link to="/cats">Cat-apult</Link>
+                <a href="/cats">Cat-apult</a>
               </li>
               <li>
                 <Link to="/quotes">The only direction</Link>
+              </li>
+              <li>
+                <Link to="/about">About this thing</Link>
               </li>
             </ul>
           </nav>
@@ -51,6 +56,9 @@ class App extends React.Component {
           </Route>
           <Route path="/cats">
             <Cats getCat={this.getCat} cat={this.state.cat} />
+          </Route>
+          <Route path="/about">
+            <About />
           </Route>
         </main>
         
